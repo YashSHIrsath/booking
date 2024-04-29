@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="common.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+          <img style="width: 200px; height: 35px; margin:0px  30px ;" src="images/newapex.png" alt="">
+
+
+          <a style="text-decoration: none;" href="main.html" ><li style="color: white; background-color: #234b9e;">HOME <ion-icon name="home-outline" style="margin: 0px 0px 2px 6px;"></ion-icon></li></a>
+
+
+          <a style="text-decoration: none;" href="#about"><li>ABOUT<ion-icon style="margin: 0px 0px 0px 6px; color: #234b9e;"name="information-circle-outline"></ion-icon></li></a>
+
+
+          <a style="list-style: none; text-decoration: none;   border-radius: 25px;" href="" class="signin"><li style=" display: flex; justify-content: center;align-items: center;">SIGN UP<ion-icon style="padding:0px 0px 0px 5px; color: #234b9e;" name="log-out-outline"></ion-icon></li></a> 
+
+
+        </ul>
+    </nav>
+
+    <div class="display-info">
+        <div class="intro-info">
+            <div class="image-info">
+                <img  src="images/new posters/madgoan.jpg" alt="">
+            </div>
+            <div class="information">
+                <div class="part1">
+                    <h2 id="header">Madgoan Express</h2>
+                    <p id="cost">300 Rs</p>
+                    <p>2h 25m • Drama Comedy • UA </p>
+                    <p> हिन्दी English (3D)</p>
+                    <p style="margin: 10px 0px;"><b>Release Date</b> :  22 June, 2024</p>
+                    
+                    
+                </div>
+                <div class="part2">
+                    <a href="https://youtu.be/B7VP47oCZfE?si=a1HWtUTy6HgBm7OX"><button id="submit">Watch trailer</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h1>About</h1>
+            <p>
+                Three childhood friends embark on a trip to Goa that goes completely off-track when they wake up in their hotel room to find a cache of cocaine belonging to a don.
+            </p>
+        </div>
+
+        <div class="cast-crew">
+            <h1>Cast</h1>
+            <div class="cast">
+                <div class="cast-info">
+                    <img src="images/cast/madgoan/Divyendu-sharma.avif" alt=""> 
+                    <h3>Divyanshu Sharma</h3>  
+                    <p style="font-size: 10px; color: grey;">Actress</p>
+                </div>
+                <div class="cast-info">
+                    <img src="images/cast/madgoan/Nora-Fatehi-9-4ae82dc0-4ec4-11ed-af77-69b83a78be71.avif" alt="">
+                    <h3>Nora Fatehi</h3> 
+                    <p style="font-size: 10px; color: grey;">Actress</p>
+                </div>
+                <div class="cast-info">     
+                    <img src="images/cast/madgoan/pratik-933b6180-3180-11ec-b375-576c4f6c8c68.avif" alt="">
+                    <h3>Pratik Gandhi</h3> 
+                    <p style="font-size: 10px; color: grey;">Actor</p>
+                </div>
+                <div class="cast-info">
+                    <img src="images/cast/madgoan/Avinash-Tiwary.avif" alt="">
+                    <h3>Avinash Tiwary</h3> 
+                    <p style="font-size: 10px; color: grey;">Actress</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <footer id="about">
+        <div class="description">
+            <img  src="images/newapex.png" style="width: 200px; margin-top: 5px;" alt="">
+            <div class="informations" style="font-size: 15px;">
+                <br>
+                Welcome to Apex Theater, your premier destination for cinematic experiences in Nashik. Immerse yourself in state-of-the-art facilities, comfortable seating, and a wide selection of the latest blockbuster movies.<br> Join us for an unforgettable journey into the world of cinema."Experience the magic of movies at Apex Theater, where entertainment meets excellence. Located in the heart of Nashik, our theater boasts cutting-edge technology, plush seating, and a welcoming atmosphere for movie lovers of all ages. Discover the joy of cinema with us today.
+                <br>
+                <br>
+                © 2024 All rights reserved
+            </div>
+        </div>
+        <div class="otherLinks">
+            <h1 style="color: #234b9e;">Contact</h1>
+            <br>
+            <p>PHONE </p>
+            <p>+91 99130 30137</p>
+            <p>0253 1233 2132</p>
+            <p>apexmovies@gmail.com</p>
+            <div class="appicons" style="margin-top: 20px;">
+                <img width="100px" src="images/Google Play.c5689d4f9b55e58a8076b39af11d5ab9.svg" alt="">
+                <img width="100px" src="images/App Store.537219f079dde0437e2c8e0e3ec2162d.svg" alt="">
+            </div>
+        </div>
+        <div class="address">
+            <h1 style="color: #234b9e;">Address</h1>
+            <br>
+            Apex Theater, A Division of Apex Arts Ltd, Apex House, Behind Whistling Woods Institute, Filmcity Complex, Canada Corner, Nashik - 411 112
+            <div class="bms" style="display: flex;margin-top: 37px; align-items: center;">
+                <span>Powered By : &nbsp; </span>
+                <img src="images/bms-logo-light.webp" alt="">
+            </div>
+            
+        </div>
+      </footer>
+    
+    <script>
+        const title = document.getElementById("header")
+        const buttons = document.getElementById("submit")
+        const timingss1 = document.getElementById("timings1")
+        const timingss2 = document.getElementById("timings2")
+        const timingss3 = document.getElementById("timings3")
+        const cost = document.getElementById("cost")
+         
+
+        buttons.addEventListener('click',function(e){
+            
+
+            const titlename = title.innerText;
+            const totalCost = cost.innerText;
+            const time1 = timingss1.innerText 
+            const time2 = timingss2.innerText  
+            const time3 = timingss3.innerText 
+            console.log(time1);
+
+            localStorage.setItem('title',titlename)
+            localStorage.setItem('cost',totalCost)
+            localStorage.setItem('time1',time1)
+            localStorage.setItem('time2',time2)
+            localStorage.setItem('time3',time3)
+
+            window.location.href = "index.html";
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

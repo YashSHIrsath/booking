@@ -1,0 +1,258 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli = require __DIR__ . "/database.php";
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <?php if (isset($user)): ?>
+        
+        
+        
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="common.css">
+        <title>Document</title>
+        
+    </head>
+    <body>
+        <nav style="top:0">
+            <ul>
+              <img style="width: 200px; height: 35px; margin:0px  30px ;" src="images/newapex.png" alt="">
+    
+    
+              <a style="text-decoration: none;" href="main.html" ><li style="color: white; background-color: #234b9e;">HOME <ion-icon name="home-outline" style="margin: 0px 0px 2px 6px;"></ion-icon></li></a>
+    
+    
+              <a style="text-decoration: none;" href="#about"><li>ABOUT<ion-icon style="margin: 0px 0px 0px 6px; color: #234b9e;"name="information-circle-outline"></ion-icon></li></a>
+    
+    
+              <a style="list-style: none; text-decoration: none;   border-radius: 25px;" href="admin.php" class="signin"><li style=" display: flex; justify-content: center;align-items: center;"> <?= htmlspecialchars($user["name"]) ?><ion-icon style="padding:0px 0px 0px 5px; color: #234b9e;" name="log-out-outline"></ion-icon></li></a> 
+    
+    
+            </ul>
+        </nav>
+    
+        <div class="display-info" style="padding-top : 100px">
+            <div class="intro-info">
+                <div class="image-info">
+                    <img  src="images/new posters/bade-miyan-chote-miyan-et00322647-1706081707.webp" alt="">
+                </div>
+                <div class="information">
+                    <div class="part1">
+                        <h2 id="header">Bade Miyan Chote Miyan</h2>
+                        <p id="cost">100 Rs</p>
+                        <p>2h 38m • Action, Comedy, Thriller • UA • 11 Apr, 2024</p>
+                        <p> English हिन्दी தமிழ் తెలుగు മലയാളം ಕನ್ನಡ (2D, IMAX 3D, 3D, IMAX 2D)</p>
+                        <div class="timings">
+                            <span style="font-size: 11px;">Timings : </span>
+                            <span style="font-size: 10px;" id="timings1">7:30 AM,</span>
+                            <span style="font-size: 10px;" id="timings2">9:00 AM,</span>
+                            <span style="font-size: 10px;" id="timings3">12:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <button id="submit">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="about-section">
+                <h1>About</h1>
+                <p>
+                    When a masked enemy rises within the nation, mercilessly targeting the military by stealing the country`s most dangerous weapon, Colonel Azad sends his best officer to unearth two legendary from his unit for the mission: Brooding Bade Miyan and cocky Chote Miyan.<br><br>
+                    What follows is Bade-Chote`s unmatched camaraderie and courage as the duo strives to restore justice, delivering heart-pounding action and an adrenaline-pumping cinematic experience.
+                </p>
+            </div>
+    
+            <div class="cast-crew">
+                <h1>Cast</h1>
+                <div class="cast">
+                    <div class="cast-info">
+                        <img src="images/cast/bmcm/akshay-kumar-94-1681713982.webp" alt=""> 
+                        <h3>Akshay Kumar</h3>  
+                        <p style="font-size: 10px; color: grey;">Actor</p>
+                    </div>
+                    <div class="cast-info">
+                        <img src="images/cast/bmcm/tiger_shroff_37437_27-07-2016_11-49-08.webp" alt="">
+                        <h3>Tiger Shroff</h3> 
+                        <p style="font-size: 10px; color: grey;">Actor</p>
+                    </div>
+                    <div class="cast-info">     
+                        <img src="images/cast/bmcm/prithviraj-sukumaran-31501-16-09-2017-05-40-22.webp" alt="">
+                        <h3>Prithviraj Sukumaran</h3> 
+                        <p style="font-size: 10px; color: grey;">Actor</p>
+                    </div>
+                    <div class="cast-info">
+                        <img src="images/cast/bmcm/sonakshi_sinha_18494_21-07-2016_01-34-34.webp" alt="">
+                        <h3>Sonakshi Sinha</h3> 
+                        <p style="font-size: 10px; color: grey;">Actor</p>
+                    </div>
+                </div>
+                <h1 class="crew-heading">Crew</h1>
+                <div class="crew">
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/ali-abbas-zafar-21198-26-10-2018-11-53-38.webp" alt=""> 
+                        <h3>Ali Abbas Zafar</h3>  
+                        <p style="font-size: 10px; color: grey;" class="post">Director,Producer</p>
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/vashu-bhagnani-iein004098-24-03-2017-12-54-16.webp" alt="">
+                        <h3>Vashu Bhagnani</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Producer</p>
+                    </div>
+                    <div class="crew-info">     
+                        <img src="images/crew/bmcm/jackky-bhagnani-10549-24-03-2017-14-04-58.webp" alt="">
+                        <h3>Jackky Bhagnani</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Producer</p>
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/deepshikha-deshmukh-1090922-05-03-2018-11-02-09.webp" alt="">
+                        <h3>Deepshikha</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Producer</p>
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/himanshu-kishan-mehra-2033841-1706081400.webp" alt="">
+                        <h3>Himanshu Mehra</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Producer</p>
+    
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/vishal-mishra-1060511-1709811710.webp" alt="">
+                        <h3>Vishal Mishra</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Musician</p>
+    
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/bosco-caeser-iein104452-03-08-2017-16-18-23.webp" alt="">
+                        <h3>Bosco Caeser</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Choreographer</p>
+    
+                    </div>
+                    <div class="crew-info">
+                        <img src="images/crew/bmcm/irshad-kamil-iein009048-24-03-2017-14-05-25.webp" alt="">
+                        <h3>Irshad Kamil</h3> 
+                        <p style="font-size: 10px; color: grey;" class="post">Lyricist</p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <footer id="about">
+            <div class="description">
+                <img  src="images/newapex.png" style="width: 200px; margin-top: 5px;" alt="">
+                <div class="informations" style="font-size: 15px;">
+                    <br>
+                    Welcome to Apex Theater, your premier destination for cinematic experiences in Nashik. Immerse yourself in state-of-the-art facilities, comfortable seating, and a wide selection of the latest blockbuster movies.<br> Join us for an unforgettable journey into the world of cinema."Experience the magic of movies at Apex Theater, where entertainment meets excellence. Located in the heart of Nashik, our theater boasts cutting-edge technology, plush seating, and a welcoming atmosphere for movie lovers of all ages. Discover the joy of cinema with us today.
+                    <br>
+                    <br>
+                    © 2024 All rights reserved
+                </div>
+            </div>
+            <div class="otherLinks">
+                <h1 style="color: #234b9e;">Contact</h1>
+                <br>
+                <p>PHONE </p>
+                <p>+91 99130 30137</p>
+                <p>0253 1233 2132</p>
+                <p>apexmovies@gmail.com</p>
+                <div class="appicons" style="margin-top: 20px;">
+                    <img width="100px" src="images/Google Play.c5689d4f9b55e58a8076b39af11d5ab9.svg" alt="">
+                    <img width="100px" src="images/App Store.537219f079dde0437e2c8e0e3ec2162d.svg" alt="">
+                </div>
+            </div>
+            <div class="address">
+                <h1 style="color: #234b9e;">Address</h1>
+                <br>
+                Apex Theater, A Division of Apex Arts Ltd, Apex House, Behind Whistling Woods Institute, Filmcity Complex, Canada Corner, Nashik - 411 112
+                <div class="bms" style="display: flex;margin-top: 37px; align-items: center;">
+                    <span>Powered By : &nbsp; </span>
+                    <img src="images/bms-logo-light.webp" alt="">
+                </div>
+                
+            </div>
+          </footer>
+        
+        <script>
+            const title = document.getElementById("header")
+            const buttons = document.getElementById("submit")
+            const timingss1 = document.getElementById("timings1")
+            const timingss2 = document.getElementById("timings2")
+            const timingss3 = document.getElementById("timings3")
+            const cost = document.getElementById("cost")
+             
+    
+            buttons.addEventListener('click',function(e){
+                
+    
+                const titlename = title.innerText;
+                const totalCost = cost.innerText;
+                const time1 = timingss1.innerText 
+                const time2 = timingss2.innerText  
+                const time3 = timingss3.innerText 
+                console.log(time1);
+    
+                localStorage.setItem('title',titlename)
+                localStorage.setItem('cost',totalCost)
+                localStorage.setItem('time1',time1)
+                localStorage.setItem('time2',time2)
+                localStorage.setItem('time3',time3)
+    
+                window.location.href = "index3.html";
+            })
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
+    <?php else: ?>
+        
+        <p><a href="login.php">Log in</a> or <a href="signup.html">sign up</a></p>
+        
+    <?php endif; ?>
+    
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
